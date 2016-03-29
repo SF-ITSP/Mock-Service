@@ -9,14 +9,13 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
-apply plugin: 'java'
 apply plugin: 'application' 
 
-mainClassName = 'HelloWorld'
+mainClassName = 'com.mockservice.controller.MyController'
 
 jar {
 	manifest {
-		attributes 'Main-Class' : 'HelloWorld'
+		attributes 'Main-Class' : 'com.mockservice.controller.MyController'
 	}
 }
 
