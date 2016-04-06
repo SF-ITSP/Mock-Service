@@ -11,7 +11,7 @@
 apply plugin: 'java'
 apply plugin: 'application' 
 
-mainClassName = 'com.mockservice.controller.MyController'
+mainClassName = 'com.mockservice.MockServer'
 
 jar {
 	manifest {

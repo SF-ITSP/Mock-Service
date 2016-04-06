@@ -1,48 +1,41 @@
 package com.mockservice.util;
 
-import java.io.IOException;
-import java.lang.reflect.Type;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
+
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.mockservice.model.Order;
+import static java.util.Arrays.asList;
 
 public class JsonConverter {
 
-	private static Gson gson = new Gson();
-
-	public static <T> String objectToJson(T obj) {
-		return gson.toJson(obj);
+	public static <T> String toJson(T t) {
+		return getGson().toJson(t);
 	}
 
-	public static <T> T jsonToObject(String jsonStr, Type typeOfT) {
-		return gson.fromJson(jsonStr, typeOfT);
+	public static <T> T jsonToObject(String json, TypeToken typeToken) {
+		return getGson().fromJson(json, typeToken.getType());
 	}
 
-	public static void main(String[] args) {
-		Order order = new Order();
-		order.setId(1L);
-		order.setName("name1");
-		order.setValue("value1");
-		order.setDate(new Date());
+	private static Gson getGson() {
+		GsonBuilder gsonBuilder = new GsonBuilder();
+		gsonBuilder.setDateFormat("yyyy-MM-dd HH:mm:ss");
+		return gsonBuilder.create();
+	}
 
-		List<Order> list = new ArrayList<Order>();
-		list.add(order);
-		list.add(order);
-		String jsonStr = objectToJson(list);
-		System.out.println(jsonStr);
+	public static <T> List<T> jsonFromObjectList(String json, TypeToken typeToken) {
+		List<T> list = new ArrayList<T>();
 
 		try {
-			String readFile = JsonFileReaderUtil.readFile("Order");
-			Order fromJson = jsonToObject(readFile, new TypeToken<Order>() {
-			}.getType());
-			System.out.println(fromJson.getName());
-		} catch (IOException e) {
+			T[] o = getGson().fromJson(json, typeToken.getType());
+			list = asList(o);
+		} catch (JsonSyntaxException e) {
 			e.printStackTrace();
 		}
 
+		return list;
 	}
 }
