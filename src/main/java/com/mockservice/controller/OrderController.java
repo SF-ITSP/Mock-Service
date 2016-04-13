@@ -21,5 +21,17 @@ public class OrderController {
 
         return "[]";
     }
+    
+    @RequestMapping("/getVehicleList")
+    @ResponseBody
+    public String getVehicleList(){
+    	try {
+			return JsonFileReaderUtil.readFile("Vehicle");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return "[]";
+    }
 
 }
