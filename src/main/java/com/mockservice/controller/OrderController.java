@@ -22,7 +22,7 @@ public class OrderController {
         return "[]";
     }
     
-    @RequestMapping("/getVehicleList")
+    @RequestMapping("/vehicles")
     @ResponseBody
     public String getVehicleList(){
     	try {

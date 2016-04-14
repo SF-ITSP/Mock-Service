@@ -1,107 +1,86 @@
 [
     {
-        "isSelected": true,
-        "name": "vehicle",
+        "number": "vehicle",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user0",
+        "number": "number0",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user1",
+        "number": "number1",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user2",
+        "number": "number2",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user3",
+        "number": "number3",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user4",
+        "number": "number4",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user5",
+        "number": "number5",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user6",
+        "number": "number6",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user7",
+        "number": "number7",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user8",
+        "number": "number8",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user9",
+        "number": "number9",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user10",
+        "number": "number10",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user11",
+        "number": "number11",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user12",
+        "number": "number12",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user13",
+        "number": "number13",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user14",
+        "number": "number14",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user15",
+        "number": "number15",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user16",
+        "number": "number16",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user17",
+        "number": "number17",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user18",
+        "number": "number18",
         "photo": 2130837504
     },
     {
-        "isSelected": false,
-        "name": "user19",
+        "number": "number19",
         "photo": 2130837504
     }
 ]
